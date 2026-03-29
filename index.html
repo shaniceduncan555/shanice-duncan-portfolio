@@ -280,6 +280,77 @@ body {
 .testimonials-placeholder { background: var(--bg-dark); border: 1px dashed var(--border); padding: 3rem; text-align: center; margin-top: 3rem; border-radius: 6px; }
 .testimonials-placeholder p { font-size: 0.85rem; color: var(--text-light); font-style: italic; }
 
+/* TESTIMONIALS */
+.testimonials-section { padding: 6rem 0; background: var(--surface); }
+.testimonials-intro { font-size: 0.97rem; color: var(--secondary); max-width: 640px; line-height: 1.8; margin-bottom: 3.5rem; font-weight: 400; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
+.testimonial-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2.25rem 2rem 2rem;
+  position: relative;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(31, 41, 55, 0.07), 0 2px 8px rgba(139, 92, 246, 0.05);
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.25;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.75rem;
+  pointer-events: none;
+}
+.testimonial-quote {
+  font-size: 0.93rem;
+  color: var(--primary);
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+  padding-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-divider {
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.4;
+  margin-bottom: 1.25rem;
+}
+.testimonial-byline { display: flex; flex-direction: column; gap: 0.2rem; }
+.testimonial-name {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  color: var(--primary);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--secondary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.testimonial-company {
+  font-size: 0.74rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+}
+@media (max-width: 968px) {
+  .testimonials-grid { grid-template-columns: 1fr; max-width: 540px; }
+}
+
 /* PDF MODAL */
 .pdf-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(15, 20, 30, 0.75); backdrop-filter: blur(10px); align-items: center; justify-content: center; padding: 2rem; opacity: 0; transition: opacity 0.3s; }
 .pdf-modal-overlay.open { display: flex; opacity: 1; }
@@ -571,6 +642,47 @@ function scrollWork(direction) {
     </div>
   </section>
 
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-label fade-in">Client Feedback</div>
+      <h2 class="section-title fade-in">Trusted by teams navigating<br>high-stakes submissions.</h2>
+      <p class="testimonials-intro fade-in">Clear writing matters, but so do process, responsiveness, and strategy. These testimonials reflect the kind of partnership clients can expect across proposal writing, systems work, and grant development.</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-quote">Shanice completely transformed our proposal process. What was previously fragmented and time-consuming became structured, efficient, and scalable under her leadership. She built a comprehensive content library, standardized our RFP workflows, and improved our turnaround time significantly. Beyond writing, she brought a level of organization and strategic clarity that elevated how our entire team approached submissions. Her work had a direct and lasting impact on both efficiency and proposal quality.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-byline">
+            <span class="testimonial-name">Rachel Kim</span>
+            <span class="testimonial-role">Director of Sales Operations</span>
+            <span class="testimonial-company">MindPlay Education</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in fade-in-delay-1">
+          <p class="testimonial-quote">Shanice has a rare ability to take complex product and instructional content and turn it into clear, compelling proposal language that resonates with district reviewers. Her executive summaries consistently stood out for their structure, clarity, and strategic positioning. She understands how districts evaluate proposals, and that shows in every submission. She&rsquo;s not just a strong writer&mdash;she&rsquo;s a true proposal strategist who helps you put your best foot forward in competitive bids.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-byline">
+            <span class="testimonial-name">Marcus Alvarez</span>
+            <span class="testimonial-role">Senior Account Executive</span>
+            <span class="testimonial-company">K&ndash;12 EdTech Solutions Provider</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in fade-in-delay-2">
+          <p class="testimonial-quote">Shanice brought a level of clarity and professionalism to our grant writing that we had not experienced before. She helped us clearly communicate our mission, expand on our impact, and align our program goals with funding priorities. Her ability to combine storytelling with structure made our proposal stronger and more compelling. We felt far more confident submitting our application with her guidance and support.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-byline">
+            <span class="testimonial-name">Lauren Mitchell</span>
+            <span class="testimonial-role">Program Director</span>
+            <span class="testimonial-company">Central Texas Girls Soccer Club</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="container">
       <h2 class="fade-in">Ready to strengthen your next submission?</h2>
@@ -578,8 +690,6 @@ function scrollWork(direction) {
       <a href="mailto:Shanice.duncan555@gmail.com" class="btn-gold fade-in fade-in-delay-2">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
-
-  <!-- MODALS -->
   <div class="pdf-modal-overlay" id="modal-exec" onclick="closeModalOutside(event)">
     <div class="pdf-modal">
       <div class="pdf-modal-header"><div class="pdf-modal-header-left"><div class="pdf-modal-tag">Executive Summary</div><div class="pdf-modal-title">Mathematics Instructional Platform</div></div><button class="pdf-modal-close" onclick="closeModal('modal-exec')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
@@ -712,7 +822,39 @@ function scrollWork(direction) {
         <div class="process-step fade-in fade-in-delay-2"><div class="process-step-num">03</div><h4>Refine</h4><p>Edit, review, and strengthen every section until the submission is polished, compliant, and ready to score.</p><div class="process-connector"></div></div>
         <div class="process-step fade-in fade-in-delay-3"><div class="process-step-num">04</div><h4>Deliver</h4><p>Final production, quality assurance, and handoff &mdash; on time and ready for submission.</p></div>
       </div>
-      <div class="testimonials-placeholder fade-in"><p>Client testimonials coming soon.</p></div>
+      <div class="testimonials-grid" style="margin-top:3rem">
+
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-quote">Shanice completely transformed our proposal process. What was previously fragmented and time-consuming became structured, efficient, and scalable under her leadership. She built a comprehensive content library, standardized our RFP workflows, and improved our turnaround time significantly. Beyond writing, she brought a level of organization and strategic clarity that elevated how our entire team approached submissions. Her work had a direct and lasting impact on both efficiency and proposal quality.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-byline">
+            <span class="testimonial-name">Rachel Kim</span>
+            <span class="testimonial-role">Director of Sales Operations</span>
+            <span class="testimonial-company">MindPlay Education</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in fade-in-delay-1">
+          <p class="testimonial-quote">Shanice has a rare ability to take complex product and instructional content and turn it into clear, compelling proposal language that resonates with district reviewers. Her executive summaries consistently stood out for their structure, clarity, and strategic positioning. She understands how districts evaluate proposals, and that shows in every submission. She&rsquo;s not just a strong writer&mdash;she&rsquo;s a true proposal strategist who helps you put your best foot forward in competitive bids.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-byline">
+            <span class="testimonial-name">Marcus Alvarez</span>
+            <span class="testimonial-role">Senior Account Executive</span>
+            <span class="testimonial-company">K&ndash;12 EdTech Solutions Provider</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in fade-in-delay-2">
+          <p class="testimonial-quote">Shanice brought a level of clarity and professionalism to our grant writing that we had not experienced before. She helped us clearly communicate our mission, expand on our impact, and align our program goals with funding priorities. Her ability to combine storytelling with structure made our proposal stronger and more compelling. We felt far more confident submitting our application with her guidance and support.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-byline">
+            <span class="testimonial-name">Lauren Mitchell</span>
+            <span class="testimonial-role">Program Director</span>
+            <span class="testimonial-company">Central Texas Girls Soccer Club</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
