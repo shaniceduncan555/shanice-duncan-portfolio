@@ -11,9 +11,9 @@
   --cream-dark: #F0EBE3;
   --navy: #1B2A4A;
   --navy-light: #2C3E6B;
-  --gold: #C5A572;
-  --gold-light: #D4BC94;
-  --gold-muted: rgba(197, 165, 114, 0.15);
+  --gold: #A67C3D;
+  --gold-light: #C29A5C;
+  --gold-muted: rgba(166, 124, 61, 0.14);
   --text-primary: #1B2A4A;
   --text-secondary: #5A6478;
   --text-light: #8A91A0;
@@ -83,10 +83,10 @@ body {
 .hero-content { max-width: 560px; }
 .hero-label {
   font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;
-  color: var(--gold); font-weight: 600; margin-bottom: 1.5rem;
+  color: #8A6428; font-weight: 600; margin-bottom: 1.5rem;
   display: flex; align-items: center; gap: 0.75rem;
 }
-.hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+.hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: #8A6428; }
 .hero h1 {
   font-family: var(--font-heading); font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.25; color: var(--navy); margin-bottom: 1.5rem; letter-spacing: -0.02em;
@@ -133,8 +133,8 @@ body {
 /* SECTIONS */
 .section { padding: 6rem 0; }
 .section-alt { background: var(--white); }
-.section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold); font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
-.section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+.section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; color: #8A6428; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+.section-label::before { content: ''; display: block; width: 24px; height: 1px; background: #8A6428; }
 .section-title { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); line-height: 1.3; margin-bottom: 1.25rem; letter-spacing: -0.01em; }
 .section-subtitle { font-size: 1rem; color: var(--text-secondary); max-width: 600px; line-height: 1.8; margin-bottom: 3rem; }
 
@@ -148,8 +148,8 @@ body {
 .service-card-icon svg { width: 22px; height: 22px; color: var(--gold); }
 .service-card h3 { font-family: var(--font-heading); font-size: 1.15rem; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.4; }
 .service-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; }
-.service-card-link { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--navy); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.3s; cursor: pointer; }
-.service-card-link:hover { gap: 0.7rem; }
+.service-card-link { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--navy); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.3s; cursor: pointer; }
+.service-card-link:hover { gap: 0.7rem; color: var(--gold); }
 .service-card-link svg { width: 12px; height: 12px; }
 
 /* WHY */
@@ -165,11 +165,12 @@ body {
 .work-grid-enhanced { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 2rem; align-items: start; }
 .work-card { background: var(--white); border: 1px solid var(--border); transition: all 0.4s; position: relative; overflow: hidden; }
 .work-card:hover { transform: translateY(-4px); box-shadow: 0 16px 56px rgba(27, 42, 74, 0.07); }
-.work-card.featured { border-color: var(--gold-light); }
+.work-card.featured:hover { box-shadow: 0 16px 56px rgba(166, 124, 61, 0.13), 0 4px 20px rgba(27, 42, 74, 0.06); }
+.work-card.featured { border-color: var(--gold-light); border-width: 1.5px; background: #FDFAF5; }
 .work-card.featured::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); z-index: 2; }
-.work-card-thumb { width: 100%; aspect-ratio: 8.5/6; overflow: hidden; position: relative; background: var(--cream-dark); border-bottom: 1px solid var(--border); }
-.work-card.featured .work-card-thumb { aspect-ratio: 8.5/6.5; }
-.work-card-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.5s ease; }
+.work-card-thumb { width: 100%; aspect-ratio: 8.5/7.2; overflow: hidden; position: relative; background: #f7f3ec; border-bottom: 1px solid var(--border); }
+.work-card.featured .work-card-thumb { aspect-ratio: 8.5/7.5; }
+.work-card-thumb img { width: 100%; height: 100%; object-fit: contain; object-position: center top; transition: transform 0.5s ease; padding: 0.5rem; background: #f7f3ec; }
 .work-card:hover .work-card-thumb img { transform: scale(1.03); }
 .work-card-thumb-overlay { position: absolute; inset: 0; background: rgba(27, 42, 74, 0.0); transition: background 0.4s; display: flex; align-items: center; justify-content: center; }
 .work-card:hover .work-card-thumb-overlay { background: rgba(27, 42, 74, 0.4); }
@@ -177,7 +178,7 @@ body {
 .work-card:hover .work-card-thumb-cta { opacity: 1; transform: translateY(0); }
 .work-card-body { padding: 1.75rem 1.75rem 1.5rem; }
 .work-card.featured .work-card-body { padding: 2rem 2rem 1.75rem; }
-.work-card-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); font-weight: 600; margin-bottom: 0.65rem; display: inline-block; }
+.work-card-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em; color: #8A6428; font-weight: 600; margin-bottom: 0.65rem; display: inline-block; }
 .work-card-title { font-family: var(--font-heading); font-size: 0.95rem; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.45; }
 .work-card.featured .work-card-title { font-size: 1.05rem; }
 .work-card-desc { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem; }
@@ -212,7 +213,7 @@ body {
 .service-detail-number { font-family: var(--font-heading); font-size: 4rem; color: var(--gold-muted); line-height: 1; margin-bottom: 1rem; font-weight: 700; }
 .service-detail h2 { font-family: var(--font-heading); font-size: 1.6rem; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.35; }
 .service-detail > .service-detail-grid > div:first-child > p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; }
-.service-includes h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); font-weight: 600; margin-bottom: 1.25rem; }
+.service-includes h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: #8A6428; font-weight: 600; margin-bottom: 1.25rem; }
 .service-includes-list { display: flex; flex-direction: column; gap: 0.9rem; }
 .service-includes-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
 .service-includes-item svg { width: 16px; height: 16px; min-width: 16px; color: var(--gold); margin-top: 3px; }
@@ -229,19 +230,19 @@ body {
 .testimonials-placeholder p { font-size: 0.85rem; color: var(--text-light); font-style: italic; }
 
 /* PDF MODAL */
-.pdf-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(27, 42, 74, 0.65); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2rem; opacity: 0; transition: opacity 0.3s; }
+.pdf-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(15, 25, 46, 0.72); backdrop-filter: blur(10px); align-items: center; justify-content: center; padding: 2rem; opacity: 0; transition: opacity 0.3s; }
 .pdf-modal-overlay.open { display: flex; opacity: 1; }
-.pdf-modal { background: var(--white); width: 100%; max-width: 860px; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 32px 80px rgba(27, 42, 74, 0.2); position: relative; overflow: hidden; }
+.pdf-modal { background: var(--white); width: 100%; max-width: 1120px; max-height: 94vh; display: flex; flex-direction: column; box-shadow: 0 40px 100px rgba(15, 25, 46, 0.28); position: relative; overflow: hidden; border-radius: 14px; }
 .pdf-modal-header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); flex-shrink: 0; }
 .pdf-modal-header-left { display: flex; flex-direction: column; gap: 0.2rem; }
-.pdf-modal-tag { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); font-weight: 600; }
+.pdf-modal-tag { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; color: #8A6428; font-weight: 600; }
 .pdf-modal-title { font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy); line-height: 1.35; }
-.pdf-modal-close { width: 36px; height: 36px; background: var(--cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
-.pdf-modal-close:hover { background: var(--cream-dark); }
+.pdf-modal-close { width: 36px; height: 36px; background: var(--cream); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
+.pdf-modal-close:hover { background: var(--cream-dark); transform: rotate(90deg); }
 .pdf-modal-close svg { width: 16px; height: 16px; color: var(--navy); }
 .pdf-modal-intro { padding: 1.25rem 2rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-.pdf-modal-body { flex: 1; overflow-y: auto; padding: 1.5rem 2rem; display: flex; justify-content: center; background: var(--cream); }
-.pdf-modal-body img { width: 100%; max-width: 700px; height: auto; box-shadow: 0 4px 20px rgba(27, 42, 74, 0.08); border: 1px solid var(--border); }
+.pdf-modal-body { flex: 1; overflow-y: auto; padding: 2rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.75rem; background: #f3efe8; }
+.pdf-modal-body img { width: 100%; max-width: 920px; height: auto; display: block; box-shadow: 0 10px 30px rgba(27, 42, 74, 0.10); border: 1px solid rgba(27, 42, 74, 0.08); background: white; border-radius: 2px; }
 .pdf-modal-footer { padding: 1rem 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; background: var(--white); }
 .pdf-modal-note { font-size: 0.75rem; color: var(--text-light); font-style: italic; }
 .pdf-modal-footer .btn-primary { padding: 0.65rem 1.5rem; font-size: 0.72rem; }
@@ -343,7 +344,7 @@ function closeModalOutside(e) {
       <a href="#" onclick="return showPage('home')">Home</a>
       <a href="#" onclick="return showPage('services')">Services</a>
       <a href="#work-section" onclick="return showPage('home')">Work</a>
-      <a href="mailto:Shanice.duncan555@gmail.com" class="nav-cta">Book a Consultation</a>
+      <a href="/cdn-cgi/l/email-protection#411229202f2822246f25342f22202f74747401262c20282d6f222e2c" class="nav-cta">Book a Consultation</a>
     </div>
     <button class="nav-mobile-toggle" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -362,7 +363,7 @@ function closeModalOutside(e) {
           <h1>Win More Contracts.<br>Submit Smarter.</h1>
           <p>Strategic proposal support for education organizations, SaaS teams, and nonprofits that need sharp writing, airtight compliance, and systems built to scale.</p>
           <div class="hero-buttons">
-            <a href="mailto:Shanice.duncan555@gmail.com" class="btn-primary">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/cdn-cgi/l/email-protection#4d1e252c23242e28632938232e2c237878780d2a202c2421632e2220" class="btn-primary">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="#" class="btn-secondary" onclick="return showPage('services')">View Services</a>
           </div>
         </div>
@@ -460,7 +461,7 @@ function closeModalOutside(e) {
     <div class="container">
       <h2 class="fade-in">Ready to strengthen your next submission?</h2>
       <p class="fade-in fade-in-delay-1">Let's build a proposal process that is sharper, faster, and positioned to win.</p>
-      <a href="mailto:Shanice.duncan555@gmail.com" class="btn-gold fade-in fade-in-delay-2">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="/cdn-cgi/l/email-protection#386b505956515b5d165c4d565b59560d0d0d785f55595154165b5755" class="btn-gold fade-in fade-in-delay-2">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
 
@@ -469,33 +470,33 @@ function closeModalOutside(e) {
     <div class="pdf-modal">
       <div class="pdf-modal-header"><div class="pdf-modal-header-left"><div class="pdf-modal-tag">Executive Summary</div><div class="pdf-modal-title">Mathematics Instructional Platform</div></div><button class="pdf-modal-close" onclick="closeModal('modal-exec')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
       <div class="pdf-modal-intro">Executive summary developed for a research-validated K&ndash;12 mathematics platform. Structured for competitive evaluation environments with emphasis on standards alignment, instructional design, and district-level readiness.</div>
-      <div class="pdf-modal-body" style="flex-direction:column;gap:1rem;align-items:center">
+      <div class="pdf-modal-body">
         <img src="Screenshot_2026-03-29_143044.png" alt="Executive Summary Preview Page 1">
         <img src="Screenshot_2026-03-29_142718.png" alt="Executive Summary Preview Page 2">
       </div>
-      <div class="pdf-modal-footer"><span class="pdf-modal-note">Limited preview &mdash; full materials available upon request.</span><a href="mailto:Shanice.duncan555@gmail.com" class="btn-primary" style="text-decoration:none">Request Full Sample</a></div>
+      <div class="pdf-modal-footer"><span class="pdf-modal-note">Limited preview &mdash; full materials available upon request.</span><a href="/cdn-cgi/l/email-protection#e1b289808f888284cf85948f82808fd4d4d4a1868c80888dcf828e8c" class="btn-primary" style="text-decoration:none">Request Full Sample</a></div>
     </div>
   </div>
   <div class="pdf-modal-overlay" id="modal-grant" onclick="closeModalOutside(event)">
     <div class="pdf-modal">
       <div class="pdf-modal-header"><div class="pdf-modal-header-left"><div class="pdf-modal-tag">Grant Writing</div><div class="pdf-modal-title">Nonprofit Expansion Grant &mdash; Regional Rescue Initiative</div></div><button class="pdf-modal-close" onclick="closeModal('modal-grant')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
       <div class="pdf-modal-intro">Full grant narrative supporting a multi-state organizational expansion. Combines program storytelling with operational planning, projected outcomes, and a scalable growth model aligned to funder priorities.</div>
-      <div class="pdf-modal-body" style="flex-direction:column;gap:1rem;align-items:center">
+      <div class="pdf-modal-body">
         <img src="Screenshot_2026-03-29_142836.png" alt="Grant Writing Preview Page 1">
       </div>
-      <div class="pdf-modal-footer"><span class="pdf-modal-note">Limited preview &mdash; full materials available upon request.</span><a href="mailto:Shanice.duncan555@gmail.com" class="btn-primary" style="text-decoration:none">Request Full Sample</a></div>
+      <div class="pdf-modal-footer"><span class="pdf-modal-note">Limited preview &mdash; full materials available upon request.</span><a href="/cdn-cgi/l/email-protection#e9ba818887808a8cc78d9c878a8887dcdcdca98e84888085c78a8684" class="btn-primary" style="text-decoration:none">Request Full Sample</a></div>
     </div>
   </div>
   <div class="pdf-modal-overlay" id="modal-rfp" onclick="closeModalOutside(event)">
     <div class="pdf-modal">
       <div class="pdf-modal-header"><div class="pdf-modal-header-left"><div class="pdf-modal-tag">RFP / Proposal Writing</div><div class="pdf-modal-title">K&ndash;5 Literacy Program Proposal &mdash; District Submission</div></div><button class="pdf-modal-close" onclick="closeModal('modal-rfp')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
       <div class="pdf-modal-intro">Structured RFP response for a K&ndash;5 literacy program submission. Covers instructional approach, Science of Reading alignment, implementation planning, and articulation of product value for district evaluators.</div>
-      <div class="pdf-modal-body" style="flex-direction:column;gap:1rem;align-items:center">
+      <div class="pdf-modal-body">
         <img src="Screenshot_2026-03-29_142706.png" alt="RFP Proposal Preview Page 1">
         <img src="Screenshot_2026-03-29_142757.png" alt="RFP Proposal Preview Page 2">
         <img src="Screenshot_2026-03-29_142807.png" alt="RFP Proposal Preview Page 3">
       </div>
-      <div class="pdf-modal-footer"><span class="pdf-modal-note">Limited preview &mdash; full materials available upon request.</span><a href="mailto:Shanice.duncan555@gmail.com" class="btn-primary" style="text-decoration:none">Request Full Sample</a></div>
+      <div class="pdf-modal-footer"><span class="pdf-modal-note">Limited preview &mdash; full materials available upon request.</span><a href="/cdn-cgi/l/email-protection#abf8c3cac5c2c8ce85cfdec5c8cac59e9e9eebccc6cac2c785c8c4c6" class="btn-primary" style="text-decoration:none">Request Full Sample</a></div>
     </div>
   </div>
 
@@ -570,7 +571,7 @@ function closeModalOutside(e) {
     <div class="container">
       <h2 class="fade-in">Let's talk about your next submission.</h2>
       <p class="fade-in fade-in-delay-1">Whether you need a single proposal or a complete operational overhaul, I'd welcome the conversation.</p>
-      <a href="mailto:Shanice.duncan555@gmail.com" class="btn-gold fade-in fade-in-delay-2">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="/cdn-cgi/l/email-protection#92c1faf3fcfbf1f7bcf6e7fcf1f3fca7a7a7d2f5fff3fbfebcf1fdff" class="btn-gold fade-in fade-in-delay-2">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
 
@@ -582,13 +583,13 @@ function closeModalOutside(e) {
       <p>&copy; 2026 Shanice Duncan. All rights reserved.</p>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/shanice-duncan-537885215/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:Shanice.duncan555@gmail.com">Email</a>
+        <a href="/cdn-cgi/l/email-protection#04576c656a6d67612a60716a67656a313131446369656d682a676b69">Email</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('DOMContentLoaded', function() {
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
@@ -596,20 +597,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
-  window.addEventListener('scroll', function() {
-    var nav = document.getElementById('mainNav');
-    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.pdf-modal-overlay.open').forEach(function(m) {
-        m.classList.remove('open');
-        document.body.style.overflow = '';
-        setTimeout(function() { m.style.display = 'none'; }, 300);
-      });
-    }
-  });
-});
-</script>
-</body>
-</html>
+  window.addEventListener('
